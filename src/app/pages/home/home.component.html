@@ -1,0 +1,65 @@
+<app-header></app-header>
+<section class="mainSection">
+    <div class="container">
+        <div class="p-3 p-md-5  mb-5 mt-5">
+            <h1 class="mainTitle">
+                Bem-vindo ao painel de indicadores do governo do estado do Espírito Santo
+            </h1>
+            <div class="row mt-5">
+                <div class="col-md-4 mainHighlight">
+                    <div class="numberTitle" [countUp]="count['areas']" >0</div>
+                    Áreas Estratégicas
+                </div>
+                <div class="col-md-4 mainHighlight">
+                    <div class="numberTitle" [countUp]="count['desafios']">0</div>
+                    Desafios
+                </div>
+                <div class="col-md-4 mainHighlight">
+                    <div class="numberTitle" [countUp]="count['indicadores']">0</div>
+                    Indicadores
+                </div>
+            </div>
+            <p class="mt-5 ps-5 pe-5 mainText">Agora você poderá comparar as metas com os resultados alcançados pelos indicadores entre 2020 a 2022</p>
+            <div class="text-center mt-5">
+                <a href="#areas" >
+                    <i class="fa-solid fa-circle-chevron-down fa-bounce text-white fs-1" style="--fa-animation-duration: 1.8s;--fa-animation-timing:3s;--fa-animation-iteration-count:5"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="areas" #areas>
+    <div class="container mt-3 mb-3 mb-md-5 mt-md-5 pb-md-5 pt-md-5">
+        <h1 class="text-center text-dark fontMS-700 ">Áreas Estratégicas</h1>
+        <div class="row">
+            <div class="col-md-4 mt-5">
+                <div class="card border-light shadow p-3">
+                    <div class="card-title">
+                    </div>
+                    <div class="card-body">
+                        <i class="fa-solid fa-shield-halved iconCard"></i>
+                        <h4 class="card-title fontMS-700">Segurança em defesa da Vida</h4>
+                        <p class="card-text">Área composta por <span class="fw-bold">5</span> desafios e <span class="fw-bold">16</span> Indicadores Estratégicos</p>
+                        <a href="#" class="btn btn-link no_underline fontMS-700">Ver detalhes  <i class="fa-solid fa-right-long"></i></a>
+                    </div>
+                </div> 
+            </div> 
+            <div class="col-md-4 mt-5">
+                <div class="card border-light shadow p-3">
+                    <div class="card-title">
+                    </div>
+                    <div class="card-body">
+                        <i class="fa-solid fa-shield-halved iconCard"></i>
+                        <h4 class="card-title fontMS-700">Segurança em defesa da Vida</h4>
+                        <p class="card-text"> 
+                            <span class="fw-bold">5</span> Desafios<br>
+                            <span class="fw-bold">16</span> Indicadores Estratégicos
+                        </p>
+                        <a href="#" class="btn btn-link no_underline fontMS-700">Ver detalhes  <i class="fa-solid fa-right-long"></i></a>
+                    </div>
+                </div> 
+            </div> 
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

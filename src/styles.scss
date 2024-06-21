@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/fonts/fonts';
+@import './assets/fonts/mixins';
+
+:root {
+    /* Define your variables here */
+    --corDefault: #0098da;
+}
+
+*{
+    scroll-padding-top: 150px;
+}
+/* Rest of your SCSS code */
+
+.btnIcon{
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.no_underline{
+   text-decoration: none !important;
+}
