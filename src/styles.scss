@@ -1,16 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
 @import './assets/fonts/fonts';
-@import './assets/fonts/mixins';
+@import './assets/styles/mixins';
+@import './assets/styles/variables';
 
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
 :root {
-    /* Define your variables here */
     --corDefault: #0098da;
 }
 
 *{
     scroll-padding-top: 150px;
+    -webkit-user-select:none;  
+    -moz-user-select:none;     
+    -ms-user-select:none;      
+    user-select:none;  
 }
-/* Rest of your SCSS code */
 
 .btnIcon{
     width: 40px !important;
@@ -19,4 +22,8 @@
 
 .no_underline{
    text-decoration: none !important;
+}
+
+.cursor-default{
+    cursor: default !important;
 }

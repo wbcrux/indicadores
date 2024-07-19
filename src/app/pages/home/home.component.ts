@@ -1,4 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import { HomeService } from "../../shared/services/home/home.service";
+import { IHome,HomeData } from "../../shared/interfaces/home.interface";
+import { Observable } from "rxjs";
 
 @Component({
 	selector: "app-home",
@@ -8,18 +11,25 @@ import { Component, OnInit } from "@angular/core";
 export class HomeComponent implements OnInit {
 
 	public title = "indicadores";
-	public count:{ [key: string]: number } = {
-		"areas": 9,
-		"indicadores": 15,
-		"desafios": 155,
-	};
+	public homeData!:IHome;
 
 
-	constructor() { 
+	constructor(private _homeService: HomeService) { 
+		this.homeData = new HomeData();
+		console.log(this.homeData);
 	}
 
 	ngOnInit(): void {
-		// Initialization logic goes here
+		this.getData();
+	}
+
+	getData(){
+		const responseData = this._homeService.getGeneralData();
+		responseData.subscribe(
+			data=> {
+				this.homeData = data;
+				console.log("Dados backend -->",data);}
+		);
 	}
 
 }

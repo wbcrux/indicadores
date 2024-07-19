@@ -60,6 +60,13 @@
     font-size: 18px;
 }
 
+.adjustBtn{
+    position: absolute;
+    padding-left: 0;
+    // margin-bottom: 0.75rem;
+    bottom: 10px;
+}
+
 @media screen and (max-width: 1024px)   {
     .mainSection{
         min-height: 100vh;
